@@ -37,17 +37,17 @@ export default function Stories() {
 
     const story_children_ARRAY = [];
 
-    for (let i = 0; i < story_chidren_OBJ.length; i++) {
+    story_chidren_OBJ.forEach(i => {
         story_children_ARRAY.push(() => { //faço push de uma função que retorna um html, e executo essa função em cada iteração map abaixo
             return (
                 <div class="storie_div">
                     <img class="storie_size" src="./assets/stories_background.jpg" />
-                    <img class="storie_img_size" src={story_chidren_OBJ[i].image} />
-                    <p>{story_chidren_OBJ[i].name}</p>
+                    <img class="storie_img_size" src={i.image} />
+                    <p>{i.name}</p>
                 </div>
             );
         });
-    }
+    })
     //-------
     
     function Story({children}) {
