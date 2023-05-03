@@ -28,6 +28,7 @@ function App() {
                     </div>
                 </div>
             </div>
+
             <div class="ALL_side_bar">
                 <div class="ALL">
                     <div class="stories">
