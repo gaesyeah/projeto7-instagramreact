@@ -153,6 +153,9 @@ e as suas disposições são diferentes*/
   da mesma funcionar corretamente"*/
   margin-left: 17px;
 }
+.storie_div p {
+  text-align: center;
+}
 .stories {
   position: relative; /*por causa das divs .arrow e .storie_img_size*/
   overflow: hidden; /*"esconde" stories a mais dentro da div*/
