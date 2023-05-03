@@ -21,7 +21,7 @@ export default function Stories() {
         <div class="stories">
 
             <div class="stories_no_arrow">
-                {array_Story.map(i => i)}
+                {array_Story.map(i => <div>{i}</div>)}
             </div>
             
             <ion-icon class="arrow" name="chevron-forward-circle"></ion-icon>

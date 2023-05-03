@@ -36,7 +36,7 @@ export default function Suggestions() {
             </div>
 
             <div>
-                {array_Suggestion.map(i => i)}
+                {array_Suggestion.map(i => <div>{i}</div>)}
             </div>
 
         </div>
