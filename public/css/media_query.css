@@ -1,0 +1,309 @@
+/*ESSAS DUAS DIVS ABAIXO SERVEM PARA "IGNORAR" A PROPRIEDADE
+COLUMN DAS OUTRAS DIVS, ASSIM ME PERMITINDO BOTAR UMA SIDEBAR
+SEM PROBLEMAS (USANDO O MEDIA QUERY)*/
+.ALL {
+  height: 2978px;
+  width: 614px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E5E5E5;
+}
+.ALL_side_bar {
+  height: 2978px;
+  width: 940px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #E5E5E5;
+}
+/*----------------------------------------------------*/
+/*Eu poderia ter usado "display: none" para fazer a div
+não aparecer dependendo da width.
+Nesse caso eu simplesmente não defini tamanho para a div
+caso a tela seja pequena (menor que 935px), então ela 
+tem tamanho 0 quando a tela não é do tamanho que defini
+OBS: DESCOBRI QUE PRECISEI FAZER ISSO MAS NAS QUERY MOBILE
+E DO MONITOR MENOR, PQ APESAR DA DIV SUMIR, O CONTEUDO 
+DE DENTRO DELA CONTINUA LÁ*/
+@media (min-width: 935px) {
+  .side_bar { 
+    width: 293px;
+    height: 426px;
+    background-color: #E5E5E5;
+  }
+  .side_bar_fixed {
+    z-index: 1;
+    position: fixed;
+    width: 293px;
+    height: 426px;
+    background-color: #E5E5E5;
+    /*fiz uma segunda div "igual" para posiciona-la 
+    dentro da .div side_bar e fixa-la usando o position
+    sem ter que ficar reposicionando tudo, sem falar que 
+    as .divs .divs ALL e ALL_side_bar que criei pra 
+    isso perderiam todo o sentido*/
+  }
+  .top_bar_mobile {
+    display: none;
+  }
+  .top_bar_mobile_fixed {
+    display: none;
+  }
+  .bottom_bar_mobile {
+    display: none;
+  }
+  .bottom_bar_mobile_fixed {
+    display: none;
+  }
+}
+/*CONTEUDO DA SIDEBAR:*/
+.first {
+  box-sizing: content-box;
+  padding-bottom: 24px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  background-color: #E5E5E5;
+}
+.others {
+  box-sizing: content-box;
+  padding-bottom: 16px;
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #E5E5E5;
+}
+.suggestion {
+  box-sizing: content-box;
+  padding-bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #E5E5E5;
+}
+.desc {
+  padding-top: 12px;
+  background-color: #E5E5E5;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #C7C7C7;
+}
+
+.left_part {
+  width: 70%;
+  display: flex;
+  background-color: #E5E5E5;
+}
+.text_part {
+  background-color: #E5E5E5;
+  display: flex;
+  align-items: center;
+}/*criei uma div display: flex em volta de uma com flex-direction 
+column para me permitir centralizar o texto */
+.text_part_column {
+  background-color: #E5E5E5;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+}
+.row ion-icon {
+  font-size: 16px;
+  margin-left: 5px;
+}
+.right_part {
+  background-color: #E5E5E5;
+  display: flex;
+  align-items: center;
+}
+.img_margin_first {
+  margin-right: 14px;
+}
+.img_margin_others {
+  margin-right: 11px;
+}
+
+.text_bold{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #262626;
+}
+.text_1 {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #8E8E8E;
+}
+.text_2 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #8E8E8E;
+}
+.text_3 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #8E8E8E;
+}
+.text_ver {
+  color: #262626;
+  cursor: pointer;
+}
+.text_seguir {
+  color: #139EF2;
+  cursor: pointer;
+}
+.pen:hover {
+  color: rgb(0, 255, 0);
+}
+/*----------------------------------------------------*/
+/*versão para desktop com tela um pouco menor*/
+@media (max-width: 935px) {
+  .side_bar_fixed {
+    display: none;
+  }
+  .top_bar_center {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .side_bar {
+    display: none;
+  }
+  .top_bar_fixed {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .top_bar {
+    width: 100%;
+  }
+  .left {
+    margin-left: 2%;
+  }
+  .right {
+    margin-right: 2%;
+  }
+  .ALL_side_bar {
+    justify-content: center;
+  }
+  .left_full {
+    margin-left: 7.5px;
+  }
+
+  .top_bar_mobile {
+    display: none;
+  }
+  .top_bar_mobile_fixed {
+    display: none;
+  }
+  .bottom_bar_mobile {
+    display: none;
+  }
+  .bottom_bar_mobile_fixed {
+    display: none;
+  }
+}
+/*----------------------------------------------------*/
+/*versão para mobile*/
+@media (max-width: 614px) {
+  .left_full {
+    margin-left: 0px;
+  }
+  .ALL_side_bar {
+    width: 100%;
+    /*não seria necessário usar @media para a 
+    height: auto também mas quis deixar ela aqui*/
+    height: auto;
+  }
+  .ALL {
+    width: 100%;
+    /*não seria necessário usar @media para a 
+    height: auto também mas quis deixar ela aqui*/
+    height: auto;
+  }
+  .stories {
+    width: 100%;
+    border: none;
+  }
+  .posts_container {
+    width: 100%;
+    /*não seria necessário usar @media para a 
+    height: auto também mas quis deixar ela aqui*/
+    height: auto;
+  }
+  .post {
+    width: 100%;
+    border: none;
+  }
+  .top_bar {
+    display: none;
+  }
+  .top_bar_fixed {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
+  .img_size {
+    height: 60%; /*para se adaptar a div .top_bar_mobile_fixed*/
+  }
+  .post_top {
+    border-top: 1px solid #DBDBDB;
+  }
+  .post_bottom_container {
+    border-bottom: 1px solid #DBDBDB;
+  }
+  .post {
+    /*não seria necessário usar @media para a 
+    height: auto também mas quis deixar ela aqui*/
+    height: auto;
+  }
+  .top_bar_mobile {
+    display: flex;
+    width: 100%;
+    height: 54px;
+    background-color: #FFFFFF;
+    margin-bottom: 34px;
+  }
+  .top_bar_mobile_fixed {
+    /*para que as imagens e icones não fiquem 
+    por cima da barra ao rolar a pagina*/
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DBDBDB;
+  }
+  .bottom_bar_mobile {
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 54px;
+    background-color: #FFFFFF;
+  }
+  .bottom_bar_mobile_fixed {
+    display: flex;
+    bottom: 0;
+    position: fixed;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 54px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .left {
+    margin-left: 4%;
+  }
+  .right {
+    margin-right: 4%;
+  }
+}

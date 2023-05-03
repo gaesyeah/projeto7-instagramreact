@@ -1,0 +1,304 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+strong {
+  /*para o css reset me permitir usar a tag html*/
+  font-weight: bold;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+body {
+  background-color: #E5E5E5;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E5E5E5;
+}
+.left_full {
+  margin-left: 18px;
+}
+button {
+  cursor: pointer;
+}
+img {
+  cursor: pointer;
+}
+video {
+  cursor: pointer;
+}
+/*---------------tamanho dos icones e da logo--------------*/
+ion-icon {
+  font-size: 26px;
+}
+ion-icon:hover {
+  cursor: pointer;
+  color: #139EF2;
+  transition-duration: 300ms;
+}
+.mini_heart:hover {
+  color: red;
+}
+.heart:hover {
+  color: red;
+}
+.img_size {
+  margin-top: 6px;
+  height: 100%; /*para se adaptar a div .top_bar_lateral*/
+}
+hr{
+  margin-top: 6px;
+  height: 24px;
+  width: 1px;
+  border-width:0;
+  background-color: #DBDBDB;
+}
+/*---------------------------------------------------------*/
+/*serve para manter a div top_bar_fixed fixada com relação
+a uma div de mesmo tamanho, e não ao body, o que traria
+vários problemas quanto a disposição da página*/
+.top_bar {
+  width: 100%;
+  height: 54px;
+  background-color: #FFFFFF;
+  margin-bottom: 34px;
+}
+.top_bar_fixed {
+  /*para que as imagens e icones não fiquem 
+  por cima da barra ao rolar a pagina*/
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 54px;
+  background-color: #FFFFFF;
+  display: flex;
+  /*na versão 935px(tela menor) e na 624px(mobile) 
+  é justify-content: space-between*/
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #DBDBDB;
+}
+/*na versão mobile os icones, logo 
+e as suas disposições são diferentes*/
+.top_bar_center {
+  width: 215px;
+  height: 28px;
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  font-size: 12px;
+  margin-right: 220px;
+  margin-left: 220px;
+  border: 1px solid #DBDBDB;
+}
+.top_bar_center::placeholder {
+  text-align: center;
+}
+.top_bar_lateral {
+  width: 143px;
+  height: 29px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*---------------------------------------------------------*/
+.arrow {
+  color: #FFFFFF;
+  background-color: rgba(121, 121, 121, 0.175);
+  border-radius: 100%;
+  box-shadow: 1.5px 1px 1.5px 1px rgba(121, 121, 121, 0.175);
+  /*as duas alterações abaixo junto da div .storie_img_size
+  ter position:absolute fazem a seta ficar por cima dos stories
+  , e no canto direito */
+  position: absolute;
+  right: 0;  
+}
+.storie_size {
+  height: 66px;
+  border-radius: 100%; /*retirar a parte quadrada do circulo*/
+}
+.storie_img_size {
+  position: absolute;
+  border-radius: 100%; /*retirar a parte quadrada do circulo*/
+  height: 56px;
+  margin-top: 5px;
+  /*fiz isso para ficar uma imagem sobre a outra,
+  e posicionada no local correto
+  OBS: nesse caso é tranquilo, nem vou precisar
+  alterar nada na versão mobile já que a div
+  .stories terá sempre a mesma height(altura)*/
+}
+.storie_div {
+  color: #262626;
+  font-size: 12px;
+  font-weight: 400;
+  height: 78px;
+  width: 66px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* usei "margin-left" ao invés de "justify-content: 
+  space-evenly" na div .stories para o "overflow:hidden
+  da mesma funcionar corretamente"*/
+  margin-left: 17px;
+}
+.stories {
+  position: relative; /*por causa das divs .arrow e .storie_img_size*/
+  overflow: hidden; /*"esconde" stories a mais dentro da div*/
+  width: 614px;
+  height: 118px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  margin-bottom: -26px; /*para reduzir a margin: top da div .post*/
+  border: 1px solid #DBDBDB;
+}
+/*---------------------------------------------------------*/
+.posts_container {
+  height: 2978px;
+  width: 614px;
+  background-color: #E5E5E5;
+}
+.post {
+  height: 911px;
+  width: 614px;
+  background-color: #FFFFFF;
+  margin-top: 8.5%;
+  /*justify-content não funciona com flex-direction column
+  ,então vou adicionar margin mesmo para afastar as divs
+  OBS: ESSES VALORES DEVEM SER DIFERENTES NO MOBILE*/
+  border: 1px solid #DBDBDB;
+}
+/*---------------*/
+.post_bottom_container {
+  width: 100%;
+  height: 230px;
+  background-color: #FFFFFF;
+}
+.post_bottom {
+  width: 100%;
+  height: 44px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.small_img {
+  height: 20px;
+}
+.text_info {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+.see_comments {
+  color: #8E8E8E;
+  cursor: pointer;
+}
+.no_margin {
+  margin-left: 0px;
+}
+.margin {
+  margin-left: 17px;
+}
+.bottom {
+  margin-top: 5px;
+}
+.mini_heart {
+  font-size: 20px;
+  margin-right: 20px;
+}
+.likes_info {
+  display: flex;
+  align-items: center;
+}
+.comments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.send_comment {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 17px;
+  margin-left: 17px;
+  margin-top: 8px;
+}
+.send_comment input{
+  width: 100%;
+  background-color: #FAFAFA;
+  border: 1px solid #DBDBDB;
+  height: 23px;
+}
+.send_comment button {
+  margin-left: 7px;
+  background-color: #B2DFFC;
+  border: 1px solid #DBDBDB;
+  height: 23px;
+}
+.send_comment button:hover {
+  background-color: #0095F6;
+  transition-duration: 300ms;
+}
+/*---------------*/
+.post_img_size {
+  width: 100%;
+  /*a linha abaixo faz a imagem se tornar um quadrado
+  (pode e vai alarga-la ou encurta-la)*/
+  aspect-ratio: 1 / 1;
+}
+.post_top {
+  width: 100%;
+  height: 64px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  height: 100%;
+  margin-right: 15px;
+  margin-left: 17px;
+  /*fiz isso para afastar a img do canto e do texto
+  OBS: nesse caso é tranquilo, nem vou precisar
+  alterar nada na versão mobile já que os posts
+  vão ter semre o mesmo tamanho*/
+}
+.post_top_left {
+  color: #262626;
+  font-size: 14px;
+  font-weight: 500;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+.post_down_left {
+  margin-left: 17px;
+  width: 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post_top_down_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 18px;
+  /*fiz isso para afastar o icone do canto
+  OBS: nesse caso é tranquilo, nem vou precisar
+  alterar nada na versão mobile já que os posts
+  vão ter semre o mesmo tamanho*/
+}
