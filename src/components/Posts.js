@@ -61,7 +61,7 @@ export default function Posts() {
                         <ion-icon name="ellipsis-horizontal"></ion-icon>
                     </div>
                 </div>
-                <video class="post_img_size" controls>
+                <video class="post_img_size" muted controls>
                     <source src="./assets/video.mp4" type="video/mp4" />
                     <source src="./assets/video.ogg" type="video/ogg" />
                 </video>

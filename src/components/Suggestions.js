@@ -1,6 +1,6 @@
 export default function Suggestions() {
 
-    function Suggestion() {
+    function suggestion_children() {
         return (
             <div class="others">
                 <div class="left_part">
@@ -19,13 +19,15 @@ export default function Suggestions() {
         );
     }
 
-    const array_Suggestion = [];
-
+    const suggestion_children_array = [];
     for (let i = 0; i < 5; i++) {
-        array_Suggestion.push(Suggestion());
+        suggestion_children_array.push(suggestion_children());
     }
-
-//--------------------------------------------------------------
+    //------
+    function Suggestion ({children}) {
+        return <div>{children}</div>;
+    }
+//----------
 
     return (
         <div>
@@ -36,7 +38,7 @@ export default function Suggestions() {
             </div>
 
             <div>
-                {array_Suggestion.map(i => <div>{i}</div>)}
+                {suggestion_children_array.map(i => <Suggestion>{i}</Suggestion>)}
             </div>
 
         </div>
