@@ -228,6 +228,7 @@ column para me permitir centralizar o texto */
   .stories {
     width: 100%;
     border: none;
+    overflow: scroll;
   }
   .posts_container {
     width: 100%;
