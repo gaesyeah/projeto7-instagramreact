@@ -35,35 +35,25 @@ export default function Stories() {
         }
     ]
 
-    const story_children_ARRAY = [];
-
-    story_chidren_OBJ.forEach(i => {
-        story_children_ARRAY.push(() => { //faço push de uma função que retorna um html, e executo essa função em cada iteração map abaixo
-            return (
-                <div class="storie_div">
-                    <img class="storie_size" src="./assets/stories_background.jpg" />
-                    <img class="storie_img_size" src={i.image} />
-                    <p>{i.name}</p>
-                </div>
-            );
-        });
-    })
-    //-------
-    
-    function Story({children}) {
-        return <div>{children}</div>;
-    }
-//----------
-
     return (
         <div class="stories">
 
             <div class="stories_no_arrow">
-                {story_children_ARRAY.map(i => <Story>{i()}</Story>)} 
+                {story_chidren_OBJ.map(i => <Story image={i.image} name={i.name}/>)} 
             </div>
 
             <ion-icon class="arrow" name="chevron-forward-circle"></ion-icon>
 
+        </div>
+    );
+}
+
+function Story(props) {
+    return (
+        <div class="storie_div">
+            <img class="storie_size" src="./assets/stories_background.jpg" />
+            <img class="storie_img_size" src={props.image} />
+            <p>{props.name}</p>
         </div>
     );
 }
