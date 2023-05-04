@@ -1,157 +1,53 @@
+import Post from './Post';
+
 export default function Posts() {
+
+    const post_OBJ = [
+        {
+            user_img: './assets/3_number.png',
+            user: 'dev frustrado',
+            image: './assets/perdi.png',
+            user_comment: 'quarto doguinho',
+            comment_img: './assets/3_dog.png',
+            likes: '654.865',
+            title: 'meu cliente ai',
+            N_comments: '276',
+            comment1: 'eu ai',
+            comment2: 'perdi tudo',
+            comment3: 'gente e aqui que pede comida online?'
+        },
+        {
+            user_img: './assets/1_number.png',
+            user: 'Dona Maria',
+            image: './assets/video_pausado.png',
+            user_comment: 'quinto doguinho',
+            comment_img: './assets/4_dog.png',
+            likes: '15',
+            title: 'ó que fofo gente',
+            N_comments: '7',
+            comment1: 'oxe, ta travado pra vcs tmb?',
+            comment2: 'acho que seu celular queimou',
+            comment3: 'bonitinhooo, mas ele ta parado pq? ta doente? deu pena dele'
+        },
+        {
+            user_img: './assets/5_number.png',
+            user: 'Jojofag Cult',
+            image: './assets/jojo.jpg',
+            user_comment: 'primeiro doguinho',
+            comment_img: './assets/0_dog.webp',
+            likes: '2',
+            title: 'saudades bob esponja',
+            N_comments: '5',
+            comment1: 'oxe quem é essa?',
+            comment2: 'ss sdds',
+            comment3: 'oi gente'
+        }
+    ]
+
+
     return (
         <div class="posts_container">
-
-            <div class="post">
-                <div class="post_top">
-                    <div class="post_top_left">
-                        <img class="icon" src="./assets/storie_generico.png" />
-                        <p>titulo genérico</p>
-                    </div>
-                    <div class="post_top_down_right">
-                        <ion-icon name="ellipsis-horizontal"></ion-icon>
-                    </div>
-                </div>
-                <img class="post_img_size" src="./assets/perdi.png" />
-                <div class="post_bottom_container">
-                    <div class="post_bottom">
-                        <div class="post_down_left">
-                            <ion-icon class="heart" name="heart-outline"></ion-icon>
-                            <ion-icon name="chatbubble-outline"></ion-icon>
-                            <ion-icon name="paper-plane-outline"></ion-icon>
-                        </div>
-                        <div class="post_top_down_right">
-                            <ion-icon name="bookmark-outline"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="left_full bottom likes_info">
-                        <img class="left small_img" src="./assets/storie_generico.png" />
-                        <p class="text_info">
-                            Curtido por <strong>algúem aí</strong> e <strong>outras 654.865 pessoas</strong>
-                        </p>
-                    </div>
-                    <p class="bottom margin text_info"><strong>titulo genérico</strong> meu cliente ai</p>
-                    <p class="bottom margin text_info see_comments"><strong>Veja todos os 35 comentários</strong></p>
-                    <div class="bottom margin comments">
-                        <p class="no_margin text_info"><strong>fulano1</strong> eu ai</p>
-                        <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
-                    </div>
-                    <div class="bottom margin comments">
-                        <p class="no_margin text_info"><strong>fulano2</strong> perdi tudo</p>
-                        <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
-                    </div>
-                    <div class="bottom margin comments">
-                        <p class="no_margin text_info"><strong>fulano3</strong> gente e aqui que pede comida online?</p>
-                        <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
-                    </div>
-                    <div class="send_comment">
-                        <input type="text" placeholder="Add a comment..."></input>
-                        <button>Send</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="post_top">
-                    <div class="post_top_left">
-                        <img class="icon" src="./assets/storie_generico.png" />
-                        <p>titulo genérico</p>
-                    </div>
-                    <div class="post_top_down_right">
-                        <ion-icon name="ellipsis-horizontal"></ion-icon>
-                    </div>
-                </div>
-                <video class="post_img_size" muted controls>
-                    <source src="./assets/video.mp4" type="video/mp4" />
-                    <source src="./assets/video.ogg" type="video/ogg" />
-                </video>
-                <div class="post_bottom_container">
-                    <div class="post_bottom">
-                        <div class="post_down_left">
-                            <ion-icon class="heart" name="heart-outline"></ion-icon>
-                            <ion-icon name="chatbubble-outline"></ion-icon>
-                            <ion-icon name="paper-plane-outline"></ion-icon>
-                        </div>
-                        <div class="post_top_down_right">
-                            <ion-icon name="bookmark-outline"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="left_full bottom likes_info">
-                        <img class="left small_img" src="./assets/storie_generico.png" />
-                        <p class="text_info">
-                            Curtido por <strong>algúem aí</strong> e <strong>outras 654.865 pessoas</strong>
-                        </p>
-                    </div>
-                    <p class="bottom margin text_info"><strong>titulo genérico</strong> ó que fofo gente</p>
-                    <p class="bottom margin text_info see_comments"><strong>Veja todos os 35 comentários</strong></p>
-                    <div class="bottom margin comments">
-                        <p class="no_margin text_info"><strong>fulano1</strong> oxe, ta mutado pra vcs tmb?</p>
-                        <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
-                    </div>
-                    <div class="bottom margin comments">
-                        <p class="no_margin text_info"><strong>fulano2</strong> acho que seu celular queimou</p>
-                        <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
-                    </div>
-                    <div class="bottom margin comments">
-                        <p class="no_margin text_info"><strong>fulano3</strong> aqui tmb</p>
-                        <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
-                    </div>
-                    <div class="send_comment">
-                        <input type="text" placeholder="Add a comment..."></input>
-                        <button>Send</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="post">
-                <div class="post_top">
-                    <div class="post_top_left">
-                        <img class="icon" src="./assets/storie_generico.png" />
-                        <p>titulo genérico</p>
-                    </div>
-                    <div class="post_top_down_right">
-                        <ion-icon name="ellipsis-horizontal"></ion-icon>
-                    </div>
-                </div>
-                <img class="post_img_size" src="./assets/jojo.jpg" />
-                <div class="post_bottom_container">
-                    <div class="post_bottom">
-                        <div class="post_down_left">
-                            <ion-icon class="heart" name="heart-outline"></ion-icon>
-                            <ion-icon name="chatbubble-outline"></ion-icon>
-                            <ion-icon name="paper-plane-outline"></ion-icon>
-                        </div>
-                        <div class="post_top_down_right">
-                            <ion-icon name="bookmark-outline"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="left_full bottom likes_info">
-                        <img class="left small_img" src="./assets/storie_generico.png" />
-                        <p class="text_info">
-                            Curtido por <strong>algúem aí</strong> e <strong>outras 654.865 pessoas</strong>
-                        </p>
-                    </div>
-                    <p class="bottom margin text_info"><strong>titulo genérico</strong> saudades bob esponja</p>
-                    <p class="bottom margin text_info see_comments"><strong>Veja todos os 35 comentários</strong></p>
-                    <div class="bottom margin comments">
-                        <p class="no_margin text_info"><strong>fulano1</strong> oxe quem é essa?</p>
-                        <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
-                    </div>
-                    <div class="bottom margin comments">
-                        <p class="no_margin text_info"><strong>fulano2</strong> ss sdds</p>
-                        <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
-                    </div>
-                    <div class="bottom margin comments">
-                        <p class="no_margin text_info"><strong>fulano3</strong> oi gente</p>
-                        <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
-                    </div>
-                    <div class="send_comment">
-                        <input type="text" placeholder="Add a comment..."></input>
-                        <button>Send</button>
-                    </div>
-                </div>
-            </div>
-
+            {post_OBJ.map(i => <Post user_img={i.user_img} user={i.user} image={i.image} comment_img={i.comment_img} user_comment={i.user_comment} likes={i.likes} title={i.title} N_comments={i.N_comments} comment1={i.comment1} comment2={i.comment2} comment3={i.comment3}/>)}
         </div>
     );
 }

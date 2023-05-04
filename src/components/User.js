@@ -3,7 +3,7 @@ export default function User() {
         <div class="first">
 
             <div class="left_part">
-                <img class="img_margin_first" src="./assets/storie_generico.png" />
+                <img class="img_margin_first" src="./assets/user.webp" />
                 <div class="text_part">
                     <div class="row">
                         <p class="text_bold">USER_NAME</p>

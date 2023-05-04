@@ -121,9 +121,13 @@ column para me permitir centralizar o texto */
 }
 .img_margin_first {
   margin-right: 14px;
+  border-radius: 100%;
+  width: 56px;
 }
 .img_margin_others {
   margin-right: 11px;
+  border-radius: 100%;
+  width: 32px;
 }
 
 .text_bold{

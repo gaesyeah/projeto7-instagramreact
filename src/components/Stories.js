@@ -2,38 +2,38 @@ import Story from './Story';
 
 export default function Stories() {
 
-    const story_chidren_OBJ = [
+    const story_OBJ = [
         {
             image: './assets/0_number.png',
-            name: 'zero'
+            name: 'Dona Maria'
         },
         {
             image: './assets/1_number.png',
-            name: 'um'
+            name: 'user one'
         },
         {
             image: './assets/2_number.png',
-            name: 'dois'
+            name: 'user two'
         },
         {
             image: './assets/3_number.png',
-            name: 'três'
+            name: 'dev frustrado'
         },
         {
             image: './assets/4_number.png',
-            name: 'quatro'
+            name: 'user four'
         },
         {
             image: './assets/5_number.png',
-            name: 'cinco'
+            name: 'Jojofag Cult'
         },
         {
             image: './assets/6_number.png',
-            name: 'seis'
+            name: 'user six'
         },
         {
             image: './assets/7_number.png',
-            name: 'sétimo'
+            name: 'user seven'
         }
     ]
 
@@ -41,7 +41,7 @@ export default function Stories() {
         <div class="stories">
 
             <div class="stories_no_arrow">
-                {story_chidren_OBJ.map(i => <Story image={i.image} name={i.name}/>)} 
+                {story_OBJ.map(i => <Story image={i.image} name={i.name}/>)} 
             </div>
 
             <ion-icon class="arrow" name="chevron-forward-circle"></ion-icon>

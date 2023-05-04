@@ -201,7 +201,9 @@ e as suas disposições são diferentes*/
   align-items: center;
 }
 .small_img {
+  width: 20px;
   height: 20px;
+  border-radius: 100%;
 }
 .text_info {
   margin-left: 8px;
@@ -252,9 +254,10 @@ e as suas disposições são diferentes*/
   height: 23px;
 }
 .send_comment button {
+  border-radius: 10px;
   margin-left: 7px;
   background-color: #B2DFFC;
-  border: 1px solid #DBDBDB;
+  border: none;
   height: 23px;
 }
 .send_comment button:hover {
@@ -277,6 +280,7 @@ e as suas disposições são diferentes*/
   align-items: center;
 }
 .icon {
+  border-radius: 100%;
   height: 100%;
   margin-right: 15px;
   margin-left: 17px;

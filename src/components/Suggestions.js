@@ -1,34 +1,30 @@
+import Suggestion from './Suggestion';
+
 export default function Suggestions() {
 
-    function suggestion_children() {
-        return (
-            <div class="others">
-                <div class="left_part">
-                    <img class="img_margin_others" src="./assets/storie_generico.png" />
-                    <div class="text_part">
-                        <div class="text_part_column">
-                            <p class="text_bold">nome genérico</p>
-                            <p class="text_2">segue você</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="right_part">
-                    <p class="text_3 text_seguir">seguir</p>
-                </div>
-            </div>
-        );
-    }
-
-    const suggestion_children_array = [];
-    for (let i = 0; i < 5; i++) {
-        suggestion_children_array.push(suggestion_children());
-    }
-    //------
-    function Suggestion ({children}) {
-        return <div>{children}</div>;
-    }
-//----------
-
+    const suggestion_OBJ = [
+        {
+            image: './assets/0_dog.webp',
+            name: 'primeiro doguinho'
+        },
+        {
+            image: './assets/1_dog.png',
+            name: 'segundo doguinho'
+        },
+        {
+            image: './assets/2_dog.webp',
+            name: 'terceiro doguinho'
+        },
+        {
+            image: './assets/3_dog.png',
+            name: 'quarto doguinho'
+        },
+        {
+            image: './assets/4_dog.png',
+            name: 'quinto doguinho'
+        }
+    ]
+    
     return (
         <div>
 
@@ -38,7 +34,7 @@ export default function Suggestions() {
             </div>
 
             <div>
-                {suggestion_children_array.map(i => <Suggestion>{i}</Suggestion>)}
+                {suggestion_OBJ.map(i => <Suggestion image={i.image} name={i.name}/>)}
             </div>
 
         </div>
