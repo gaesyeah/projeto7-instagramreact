@@ -1,19 +1,24 @@
 import { useState } from 'react';
 
 export default function Post(props) {
-    const {user_img, user, image, user_comment, comment_img, title, N_comments, comment1, comment2, comment3} = props.dataPost;
-
+    const {user_img, user, image, user_comment, N_likes, comment_img, title, N_comments, comment1, comment2, comment3} = props.dataPost;
+    
     let [savePost, setSavePost] = useState('bookmark-outline');
-    let [likes, setLikes] = useState(0);
+    let [counterLikes, setCounterLikes] = useState(0);
+    let [likes, setLikes] = useState(N_likes);
     let [iconLikes, setIconLikes] = useState('heart-outline');
     let [styleLikes, setStyleLikes] = useState('black');
 
     function changeLikes() {
-        if (likes === 0) {
+        if (counterLikes === 0) {
+            setCounterLikes(1);
+
             setLikes(likes + 1);
             setIconLikes('heart');
             setStyleLikes('red');
         } else {
+            setCounterLikes(0);
+
             setLikes(likes - 1);
             setIconLikes('heart-outline');
             setStyleLikes('black');
@@ -32,7 +37,7 @@ export default function Post(props) {
                 </div>
             </div>
             <img
-                onClick={() => {likes === 0 ? changeLikes() : undefined}}
+                onClick={() => {counterLikes === 0 ? changeLikes() : undefined}}
                 class="post_img_size"
                 src={image}
             />
