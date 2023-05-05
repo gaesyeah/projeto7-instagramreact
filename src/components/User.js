@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function User() {
 
     let [userName, setUserName] = useState('Sign in');
-    let [userPhoto, setUserPhoto] = useState('./assets/user.webp')
+    let [userPhoto, setUserPhoto] = useState('./assets/user.webp');
 
     return (
         <div class="first">
