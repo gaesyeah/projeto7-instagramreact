@@ -5,7 +5,8 @@ export default function Posts() {
 
     return (
         <div class="posts_container">
-            {post_OBJ.map(i => <Post user_img={i.user_img} user={i.user} image={i.image} comment_img={i.comment_img} user_comment={i.user_comment} likes={i.likes} title={i.title} N_comments={i.N_comments} comment1={i.comment1} comment2={i.comment2} comment3={i.comment3}/>)}
+            {/* aqui eu usei somente um parametro para o props porque tem muitas propriedade nos objetos, seriam muitos parametros */}
+            {post_OBJ.map(i => <Post data={i}/>)}
         </div>
     );
 }

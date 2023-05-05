@@ -23,8 +23,8 @@ export default function Post(props) {
         <div class="post">
             <div class="post_top">
                 <div class="post_top_left">
-                    <img class="icon" src={props.user_img} />
-                    <p>{props.user}</p>
+                    <img class="icon" src={props.data.user_img} />
+                    <p>{props.data.user}</p>
                 </div>
                 <div class="post_top_down_right">
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -33,7 +33,7 @@ export default function Post(props) {
             <img
                 onClick={() => {likes === 0 ? changeLikes() : undefined}}
                 class="post_img_size"
-                src={props.image}
+                src={props.data.image}
             />
             <div class="post_bottom_container">
                 <div class="post_bottom">
@@ -54,23 +54,23 @@ export default function Post(props) {
                     </div>
                 </div>
                 <div class="left_full bottom likes_info">
-                    <img class="left small_img" src={props.comment_img} />
+                    <img class="left small_img" src={props.data.comment_img} />
                     <p class="text_info">
-                        Curtido por <strong>{props.user_comment}</strong> {likes >= 1 ? <>e <strong>outras {likes} pessoas</strong></> : undefined}
+                        Curtido por <strong>{props.data.user_comment}</strong> {likes >= 1 ? <>e <strong>outras {likes} pessoas</strong></> : undefined}
                     </p>
                 </div>
-                <p class="bottom margin text_info"><strong>{props.user}</strong> {props.title}</p>
-                <p class="bottom margin text_info see_comments"><strong>Veja todos os {props.N_comments} comentários</strong></p>
+                <p class="bottom margin text_info"><strong>{props.data.user}</strong> {props.data.title}</p>
+                <p class="bottom margin text_info see_comments"><strong>Veja todos os {props.data.N_comments} comentários</strong></p>
                 <div class="bottom margin comments">
-                    <p class="no_margin text_info"><strong>fulano1</strong> {props.comment1}</p>
+                    <p class="no_margin text_info"><strong>fulano1</strong> {props.data.comment1}</p>
                     <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
                 </div>
                 <div class="bottom margin comments">
-                    <p class="no_margin text_info"><strong>fulano2</strong> {props.comment2}</p>
+                    <p class="no_margin text_info"><strong>fulano2</strong> {props.data.comment2}</p>
                     <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
                 </div>
                 <div class="bottom margin comments">
-                    <p class="no_margin text_info"><strong>fulano3</strong> {props.comment3}</p>
+                    <p class="no_margin text_info"><strong>fulano3</strong> {props.data.comment3}</p>
                     <ion-icon class="mini_heart" name="heart-outline"></ion-icon>
                 </div>
                 <div class="send_comment">
