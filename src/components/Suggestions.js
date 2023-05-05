@@ -12,7 +12,7 @@ export default function Suggestions() {
             </div>
 
             <div>
-                {suggestion_OBJ.map(i => <Suggestion image={i.image} name={i.name}/>)}
+                {suggestion_OBJ.map(i => <Suggestion dataSuggestion={i}/>)}
             </div>
 
         </div>
