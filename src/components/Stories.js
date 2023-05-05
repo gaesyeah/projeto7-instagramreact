@@ -17,7 +17,7 @@ export default function Stories() {
         },
         {
             image: './assets/3_number.png',
-            name: 'dev frustrado'
+            name: 'dev uber'
         },
         {
             image: './assets/4_number.png',

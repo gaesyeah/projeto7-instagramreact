@@ -5,7 +5,7 @@ export default function Posts() {
     const post_OBJ = [
         {
             user_img: './assets/3_number.png',
-            user: 'dev frustrado',
+            user: 'dev uber',
             image: './assets/perdi.png',
             user_comment: 'quarto doguinho',
             comment_img: './assets/3_dog.png',
@@ -43,7 +43,6 @@ export default function Posts() {
             comment3: 'oi gente'
         }
     ]
-
 
     return (
         <div class="posts_container">
