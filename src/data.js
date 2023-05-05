@@ -7,7 +7,7 @@ export const post_OBJ = [
         N_likes: 57853,
         comment_img: './assets/3_dog.png',
         title: 'meu cliente ai',
-        N_comments: '276',
+        N_comments: 276,
         comment1: 'eu ai',
         comment2: 'perdi tudo',
         comment3: 'gente e aqui que pede comida online?'
@@ -20,7 +20,7 @@ export const post_OBJ = [
         N_likes: 15,
         comment_img: './assets/4_dog.png',
         title: 'ó que fofo gente',
-        N_comments: '7',
+        N_comments: 7,
         comment1: 'oxe, ta travado pra vcs tmb?',
         comment2: 'acho que seu celular queimou',
         comment3: 'bonitinhooo, mas ele ta parado pq? ta doente? deu pena dele'
@@ -33,7 +33,7 @@ export const post_OBJ = [
         N_likes: 3,
         comment_img: './assets/0_dog.webp',
         title: 'saudades bob esponja',
-        N_comments: '5',
+        N_comments: 5,
         comment1: 'oxe quem é essa?',
         comment2: 'ss sdds',
         comment3: 'oi gente'
