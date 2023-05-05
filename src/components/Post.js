@@ -4,17 +4,17 @@ export default function Post(props) {
 
     let [savePost, setSavePost] = useState('bookmark-outline');
     let [likes, setLikes] = useState(0);
-    let [nameLikes, setNameLikes] = useState('heart-outline');
+    let [iconLikes, setIconLikes] = useState('heart-outline');
     let [styleLikes, setStyleLikes] = useState('black');
 
     function changeLikes() {
         if (likes === 0) {
             setLikes(likes + 1);
-            setNameLikes('heart');
+            setIconLikes('heart');
             setStyleLikes('red');
         } else {
-            setLikes(0);
-            setNameLikes('heart-outline');
+            setLikes(likes - 1);
+            setIconLikes('heart-outline');
             setStyleLikes('black');
         }
     }
@@ -41,7 +41,7 @@ export default function Post(props) {
                         <ion-icon
                             onClick={changeLikes}
                             style={{color: `${styleLikes}` }}
-                            name={nameLikes}
+                            name={iconLikes}
                         ></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>

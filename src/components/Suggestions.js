@@ -1,29 +1,7 @@
 import Suggestion from './Suggestion';
+import {suggestion_OBJ} from '../data';
 
 export default function Suggestions() {
-
-    const suggestion_OBJ = [
-        {
-            image: './assets/0_dog.webp',
-            name: 'primeiro doguinho'
-        },
-        {
-            image: './assets/1_dog.png',
-            name: 'segundo doguinho'
-        },
-        {
-            image: './assets/2_dog.webp',
-            name: 'terceiro doguinho'
-        },
-        {
-            image: './assets/3_dog.png',
-            name: 'quarto doguinho'
-        },
-        {
-            image: './assets/4_dog.png',
-            name: 'quinto doguinho'
-        }
-    ]
     
     return (
         <div>
