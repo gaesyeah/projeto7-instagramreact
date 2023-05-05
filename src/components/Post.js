@@ -39,19 +39,18 @@ export default function Post(props) {
                 <div class="post_bottom">
                     <div class="post_down_left">
                         <ion-icon
+                            onClick={changeLikes}
                             style={{color: `${styleLikes}` }}
                             name={nameLikes}
-                            onClick={changeLikes}
                         ></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div class="post_top_down_right">
-                        <ion-icon 
+                        <ion-icon
                             onClick={() => {savePost === 'bookmark-outline' ? setSavePost('bookmark') : setSavePost('bookmark-outline')}}
                             name={savePost}
-                        >
-                        </ion-icon>
+                        ></ion-icon>
                     </div>
                 </div>
                 <div class="left_full bottom likes_info">
