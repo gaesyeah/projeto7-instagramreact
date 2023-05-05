@@ -17,7 +17,7 @@ export default function User() {
                 <div class="text_part">
                     <div class="row">
                         <p class="text_bold">{!userName ? 'Sign in' : userName}</p>
-                        <ion-icon onClick={() => {setUserName(prompt('Qual o seu nome?'))}} class="pen" name="pencil-sharp"></ion-icon>
+                        <ion-icon onClick={() => setUserName(prompt('Qual o seu nome?'))} class="pen" name="pencil-sharp"></ion-icon>
                     </div>
                 </div>
             </div>

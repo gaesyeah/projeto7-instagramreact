@@ -42,9 +42,6 @@ ion-icon:hover {
 .mini_heart:hover {
   color: red;
 }
-.heart:hover {
-  color: red;
-}
 .img_size {
   margin-top: 6px;
   height: 100%; /*para se adaptar a div .top_bar_lateral*/

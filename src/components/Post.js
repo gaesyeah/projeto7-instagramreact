@@ -1,4 +1,24 @@
+import { useState } from 'react';
+
 export default function Post(props) {
+
+    let [savePost, setSavePost] = useState('bookmark-outline');
+    let [likes, setLikes] = useState(0);
+    let [nameLikes, setNameLikes] = useState('heart-outline');
+    let [styleLikes, setStyleLikes] = useState('black');
+
+    function changeLikes() {
+        if (likes === 0) {
+            setLikes(likes + 1);
+            setNameLikes('heart');
+            setStyleLikes('red');
+        } else {
+            setLikes(0);
+            setNameLikes('heart-outline');
+            setStyleLikes('black');
+        }
+    }
+
     return (
         <div class="post">
             <div class="post_top">
@@ -10,22 +30,34 @@ export default function Post(props) {
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
                 </div>
             </div>
-            <img class="post_img_size" src={props.image} />
+            <img
+                onClick={() => {likes === 0 ? changeLikes() : undefined}}
+                class="post_img_size"
+                src={props.image}
+            />
             <div class="post_bottom_container">
                 <div class="post_bottom">
                     <div class="post_down_left">
-                        <ion-icon class="heart" name="heart-outline"></ion-icon>
+                        <ion-icon
+                            style={{color: `${styleLikes}` }}
+                            name={nameLikes}
+                            onClick={changeLikes}
+                        ></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div class="post_top_down_right">
-                        <ion-icon name="bookmark-outline"></ion-icon>
+                        <ion-icon 
+                            onClick={() => {savePost === 'bookmark-outline' ? setSavePost('bookmark') : setSavePost('bookmark-outline')}}
+                            name={savePost}
+                        >
+                        </ion-icon>
                     </div>
                 </div>
                 <div class="left_full bottom likes_info">
                     <img class="left small_img" src={props.comment_img} />
                     <p class="text_info">
-                        Curtido por <strong>{props.user_comment}</strong> e <strong>outras {props.likes} pessoas</strong>
+                        Curtido por <strong>{props.user_comment}</strong> {likes >= 1 ? <>e <strong>outras {likes} pessoas</strong></> : undefined}
                     </p>
                 </div>
                 <p class="bottom margin text_info"><strong>{props.user}</strong> {props.title}</p>
