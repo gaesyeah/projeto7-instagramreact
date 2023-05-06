@@ -17,10 +17,6 @@ export default function Post(props) {
             setLikes(likes + 1);
             setIconLikes('heart');
             setStyleLikes('red');
-
-            setLikeAnimation('heart');
-            setTimeout(() => setLikeAnimation('heartAnimation'), 0);
-            setTimeout(() => setLikeAnimation('hide'), 500);
         } else {
             setUserLike('not');
 
@@ -28,6 +24,12 @@ export default function Post(props) {
             setIconLikes('heart-outline');
             setStyleLikes('black');
         }
+    }
+
+    function animation() {
+        setLikeAnimation('heart');
+        setTimeout(() => setLikeAnimation('heartAnimation'), 0);
+        setTimeout(() => setLikeAnimation('hide'), 500);
     }
 
     return (
@@ -43,7 +45,7 @@ export default function Post(props) {
             </div>
             <div id='heartDiv'>
                 <img
-                    onDoubleClick={() => {userLike === 'not' ? changeLikes() : undefined}}
+                    onDoubleClick={() => {userLike === 'not' ? (changeLikes(), animation()) : undefined}}
                     className="post_img_size"
                     src={image}
                     data-test="post-image"
