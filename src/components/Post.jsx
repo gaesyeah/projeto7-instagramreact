@@ -72,15 +72,15 @@ export default function Post(props) {
                 <p className="bottom margin text_info see_comments"><strong>Veja todos os {N_comments} comentários</strong></p>
                 <div className="bottom margin comments">
                     <p className="no_margin text_info"><strong>fulano1</strong> {comment1}</p>
-                    <ion-icon className="mini_heart" name="heart-outline"></ion-icon>
+                    <ion-icon name="heart-outline"></ion-icon>
                 </div>
                 <div className="bottom margin comments">
                     <p className="no_margin text_info"><strong>fulano2</strong> {comment2}</p>
-                    <ion-icon className="mini_heart" name="heart-outline"></ion-icon>
+                    <ion-icon name="heart-outline"></ion-icon>
                 </div>
                 <div className="bottom margin comments">
                     <p className="no_margin text_info"><strong>fulano3</strong> {comment3}</p>
-                    <ion-icon className="mini_heart" name="heart-outline"></ion-icon>
+                    <ion-icon name="heart-outline"></ion-icon>
                 </div>
                 <div className="send_comment">
                     <input type="text" placeholder="Add a comment..."></input>
