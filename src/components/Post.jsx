@@ -26,7 +26,7 @@ export default function Post(props) {
     }
 
     return (
-        <div className="post">
+        <div className="post" data-test="post">
             <div className="post_top">
                 <div className="post_top_left">
                     <img className="icon" src={user_img} />
@@ -40,6 +40,7 @@ export default function Post(props) {
                 onDoubleClick={() => {userLike === 'not' ? changeLikes() : undefined}}
                 className="post_img_size"
                 src={image}
+                data-test="post-image"
             />
             <div className="post_bottom_container">
                 <div className="post_bottom">
@@ -48,6 +49,7 @@ export default function Post(props) {
                             onClick={changeLikes}
                             style={{color: `${styleLikes}` }}
                             name={iconLikes}
+                            data-test="like-post"
                         ></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
@@ -56,12 +58,13 @@ export default function Post(props) {
                         <ion-icon
                             onClick={() => {savePost === 'bookmark-outline' ? setSavePost('bookmark') : setSavePost('bookmark-outline')}}
                             name={savePost}
+                            data-test="save-post"
                         ></ion-icon>
                     </div>
                 </div>
                 <div className="left_full bottom likes_info">
                     <img className="left small_img" src={comment_img} />
-                    <p className="text_info">
+                    <p data-test="likes-number" className="text_info">
                         Curtido por <strong>{user_comment}</strong> {likes >= 1 ? <span>e <strong>outras {likes} pessoas</strong></span> : undefined}
                     </p>
                 </div>
