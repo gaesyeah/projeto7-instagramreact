@@ -6,21 +6,21 @@ export default function User() {
     let [userPhoto, setUserPhoto] = useState('./assets/user.webp');
 
     return (
-        <div class="first">
+        <div className="first">
 
-            <div class="left_part">
+            <div className="left_part">
                 <img 
                     onClick={() => setUserPhoto(prompt('Mande o link da sua foto'))} 
                     src={!userPhoto ? './assets/user.webp' : userPhoto} 
-                    class="img_margin_first" 
+                    className="img_margin_first" 
                 />
-                <div class="text_part">
-                    <div class="row">
-                        <p class="text_bold">{!userName ? 'Sign in' : userName}</p>
+                <div className="text_part">
+                    <div className="row">
+                        <p className="text_bold">{!userName ? 'Sign in' : userName}</p>
                         <ion-icon
                             onClick={() => setUserName(prompt('Qual o seu nome?'))}
                             name="pencil-sharp"
-                            class="pen"
+                            className="pen"
                         ></ion-icon>
                     </div>
                 </div>

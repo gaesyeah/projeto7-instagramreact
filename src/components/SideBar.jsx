@@ -3,16 +3,16 @@ import Suggestions from './Suggestions';
 
 export default function SideBar() {
     return (
-        <div class="side_bar">
-            <div class="side_bar_fixed">
+        <div className="side_bar">
+            <div className="side_bar_fixed">
 
             <User />
             <Suggestions />
 
-            <div class="desc">
+            <div className="desc">
                 <p>Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •Termos • Localizações • Contas mais relevantes • Hashtags • Idioma</p>
             </div>
-            <div class="desc">
+            <div className="desc">
                 <p>© 2021 INSTAGRAM DO FACEBOOK</p>
             </div>
 

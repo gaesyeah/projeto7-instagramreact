@@ -5,9 +5,9 @@ import SideBar from './SideBar';
 export default function Body() {
     return (
 
-        <div class="ALL_side_bar">
+        <div className="ALL_side_bar">
 
-            <div class="ALL">
+            <div className="ALL">
                 <Stories />
                 <Posts />
             </div>

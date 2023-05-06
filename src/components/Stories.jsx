@@ -4,13 +4,13 @@ import {story_OBJ} from '../data';
 export default function Stories() {
 
     return (
-        <div class="stories">
+        <div className="stories">
 
-            <div class="stories_no_arrow">
+            <div className="stories_no_arrow">
                 {story_OBJ.map(i => <Story dataStory={i}/>)} 
             </div>
 
-            <ion-icon class="arrow" name="chevron-forward-circle"></ion-icon>
+            <ion-icon className="arrow" name="chevron-forward-circle"></ion-icon>
 
         </div>
     );
