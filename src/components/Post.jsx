@@ -37,7 +37,7 @@ export default function Post(props) {
                 </div>
             </div>
             <img
-                onClick={() => {userLike === 'not' ? changeLikes() : undefined}}
+                onDoubleClick={() => {userLike === 'not' ? changeLikes() : undefined}}
                 class="post_img_size"
                 src={image}
             />
