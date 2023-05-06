@@ -19,8 +19,8 @@ export default function Post(props) {
             setStyleLikes('red');
 
             setLikeAnimation('heart');
-            setTimeout(() => setLikeAnimation('heartAnimation'), 1);
-            setTimeout(() => setLikeAnimation('hide'), 499);
+            setTimeout(() => setLikeAnimation('heartAnimation'), 0);
+            setTimeout(() => setLikeAnimation('hide'), 500);
         } else {
             setUserLike('not');
 
