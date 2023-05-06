@@ -1,7 +1,6 @@
 export default function NavBar() {
     return (
-        <div class="react_left">
-
+        <>
             <header class="top_bar_mobile">
                 <div class="top_bar_mobile_fixed">
                     <ion-icon class="left" name="logo-instagram"></ion-icon>
@@ -26,7 +25,6 @@ export default function NavBar() {
                     </div>
                 </div>
             </header>
-
-        </div>
+        </>
     );
 }

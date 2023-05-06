@@ -4,7 +4,7 @@ import {suggestion_OBJ} from '../data';
 export default function Suggestions() {
     
     return (
-        <div>
+        <>
 
             <div class="suggestion">
                 <p class="text_3">Sugestões para você</p>
@@ -15,6 +15,6 @@ export default function Suggestions() {
                 {suggestion_OBJ.map(i => <Suggestion dataSuggestion={i}/>)}
             </div>
 
-        </div>
+        </>
     );
 }

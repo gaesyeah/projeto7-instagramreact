@@ -37,7 +37,7 @@ export default function Post(props) {
                 </div>
             </div>
             <img
-                onDoubleClick={() => {userLike === 'not' ? changeLikes() : undefined}}
+                onClick={() => {userLike === 'not' ? changeLikes() : undefined}}
                 class="post_img_size"
                 src={image}
             />
@@ -62,7 +62,7 @@ export default function Post(props) {
                 <div class="left_full bottom likes_info">
                     <img class="left small_img" src={comment_img} />
                     <p class="text_info">
-                        Curtido por <strong>{user_comment}</strong> {likes >= 1 ? <>e <strong>outras {likes} pessoas</strong></> : undefined}
+                        Curtido por <strong>{user_comment}</strong> {likes >= 1 ? <span>e <strong>outras {likes} pessoas</strong></span> : undefined}
                     </p>
                 </div>
                 <p class="bottom margin text_info"><strong>{user}</strong> {title}</p>
