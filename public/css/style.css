@@ -310,3 +310,41 @@ e as suas disposições são diferentes*/
   alterar nada na versão mobile já que os posts
   vão ter semre o mesmo tamanho*/
 }
+/*---------------------------------------------------------*/
+#red {
+  color: red;
+}
+#black {
+  color: black;
+}
+#red:hover {
+  color: black;
+}
+#black:hover {
+  color: red;
+}
+/*---------------------------------------------------------*/
+#heartDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#heart {
+  font-size: 30px;
+  position: absolute;
+  color: white;
+}
+#heartAnimation {
+  font-size: 150px;
+  position: absolute;
+  color: white;
+  transition-duration: 300ms;
+}
+#hide {
+  display: none;
+}
+#heart:hover {
+  color: white;
+  transition: none;
+}

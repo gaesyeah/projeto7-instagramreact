@@ -8,6 +8,7 @@ export default function Post(props) {
     let [likes, setLikes] = useState(N_likes);
     let [iconLikes, setIconLikes] = useState('heart-outline');
     let [styleLikes, setStyleLikes] = useState('black');
+    let [likeAnimation, setLikeAnimation] = useState('hide');
 
     function changeLikes() {
         if (userLike === 'not') {
@@ -16,6 +17,10 @@ export default function Post(props) {
             setLikes(likes + 1);
             setIconLikes('heart');
             setStyleLikes('red');
+
+            setLikeAnimation('heart');
+            setTimeout(() => setLikeAnimation('heartAnimation'), 1);
+            setTimeout(() => setLikeAnimation('hide'), 499);
         } else {
             setUserLike('not');
 
@@ -36,18 +41,21 @@ export default function Post(props) {
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
                 </div>
             </div>
-            <img
-                onDoubleClick={() => {userLike === 'not' ? changeLikes() : undefined}}
-                className="post_img_size"
-                src={image}
-                data-test="post-image"
-            />
+            <div id='heartDiv'>
+                <img
+                    onDoubleClick={() => {userLike === 'not' ? changeLikes() : undefined}}
+                    className="post_img_size"
+                    src={image}
+                    data-test="post-image"
+                />
+                <ion-icon id={likeAnimation} name="heart"></ion-icon>
+            </div>
             <div className="post_bottom_container">
                 <div className="post_bottom">
                     <div className="post_down_left">
                         <ion-icon
                             onClick={changeLikes}
-                            style={{color: `${styleLikes}` }}
+                            id={styleLikes}
                             name={iconLikes}
                             data-test="like-post"
                         ></ion-icon>
