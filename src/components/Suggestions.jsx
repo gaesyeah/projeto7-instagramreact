@@ -11,7 +11,7 @@ export default function Suggestions() {
             </div>
 
             <div>
-                {suggestion_OBJ.map(suggestion => <Suggestion dataSuggestion={suggestion}/>)}
+                {suggestion_OBJ.map(suggestion => <Suggestion dataSuggestion={suggestion} key={suggestion.name}/>)}
             </div>
         </>
     );

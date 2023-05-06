@@ -5,8 +5,7 @@ export default function Posts() {
 
     return (
         <div className="posts_container">
-            {/* aqui eu usei somente um parametro para o props porque tem muitas propriedade nos objetos, seriam muitos parametros */}
-            {post_OBJ.map(post => <Post dataPost={post}/>)}
+            {post_OBJ.map(post => <Post dataPost={post} key={post.user}/>)}
         </div>
     );
 }

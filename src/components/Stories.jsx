@@ -7,7 +7,7 @@ export default function Stories() {
         <div className="stories">
 
             <div className="stories_no_arrow">
-                {story_OBJ.map(i => <Story dataStory={i}/>)} 
+                {story_OBJ.map(story => <Story dataStory={story} key ={story.name}/>)} 
             </div>
 
             <ion-icon className="arrow" name="chevron-forward-circle"></ion-icon>
