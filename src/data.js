@@ -13,19 +13,6 @@ export const post_OBJ = [
         comment3: 'gente e aqui que pede comida online?'
     },
     {
-        user_img: './assets/1_number.png',
-        user: 'Dona Maria',
-        image: './assets/video_pausado.png',
-        user_comment: 'quinto doguinho',
-        N_likes: 15,
-        comment_img: './assets/4_dog.png',
-        title: 'ó que fofo gente',
-        N_comments: 7,
-        comment1: 'oxe, ta travado pra vcs tmb?',
-        comment2: 'acho que seu celular queimou',
-        comment3: 'bonitinhooo, mas ele ta parado pq? ta doente? deu pena dele'
-    },
-    {
         user_img: './assets/5_number.png',
         user: 'Jojofag Cult',
         image: './assets/jojo.jpg',
@@ -37,6 +24,19 @@ export const post_OBJ = [
         comment1: 'oxe quem é essa?',
         comment2: 'ss sdds',
         comment3: 'oi gente'
+    },
+    {
+        user_img: './assets/1_number.png',
+        user: 'Dona Maria',
+        image: './assets/video_pausado.png',
+        user_comment: 'quinto doguinho',
+        N_likes: 15,
+        comment_img: './assets/4_dog.png',
+        title: 'ó que fofo gente',
+        N_comments: 7,
+        comment1: 'oxe, ta travado pra vcs tmb?',
+        comment2: 'acho que seu celular queimou',
+        comment3: 'bonitinhooo, mas ele ta parado pq? ta doente? deu pena dele'
     }
 ]
 
