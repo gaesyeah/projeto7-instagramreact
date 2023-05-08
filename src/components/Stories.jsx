@@ -10,7 +10,7 @@ export default function Stories() {
                 {story_OBJ.map(story => <Story dataStory={story} key ={story.name}/>)} 
             </div>
 
-            <ion-icon className="arrow" name="chevron-forward-circle"></ion-icon>
+            <ion-icon name="chevron-forward-circle"></ion-icon>
 
         </div>
     );

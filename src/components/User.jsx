@@ -25,7 +25,6 @@ export default function User() {
                         <ion-icon
                             onClick={() => setUserName(prompt('Qual o seu nome?'))}
                             name="pencil-sharp"
-                            className="pen"
                             data-test="edit-name"
                         ></ion-icon>
                     </div>

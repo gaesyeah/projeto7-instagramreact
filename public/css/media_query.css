@@ -114,12 +114,18 @@ column para me permitir centralizar o texto */
   font-size: 16px;
   margin-left: 5px;
 }
+.row ion-icon:hover {
+  color: rgb(0, 255, 0);
+  cursor: pointer;
+  transition-duration: 300ms;
+}
 .right_part {
   background-color: #E5E5E5;
   display: flex;
   align-items: center;
 }
 .img_margin_first {
+  cursor: pointer;
   margin-right: 14px;
   border-radius: 100%;
   width: 56px;
@@ -161,9 +167,6 @@ column para me permitir centralizar o texto */
 .text_seguir {
   color: #139EF2;
   cursor: pointer;
-}
-.pen:hover {
-  color: rgb(0, 255, 0);
 }
 /*----------------------------------------------------*/
 /*versão para desktop com tela um pouco menor*/

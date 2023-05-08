@@ -28,11 +28,10 @@ export default function Post(props) {
         }
     }
 
-    function animation() {
+    function heartAnimation() {
         setToggleHide(true);
         setTimeout(() => setLikeAnimation('heartAnimation'), 0);
-        setTimeout(() => setToggleHide(false), 500);
-        setTimeout(() => setLikeAnimation('heart'), 500);
+        setTimeout(() => (setLikeAnimation('heart'), setToggleHide(false)), 500);
     }
 
     return (
@@ -48,7 +47,7 @@ export default function Post(props) {
             </div>
             <div id='heartDiv'>
                 <img
-                    onDoubleClick={() => {userLike === 'not' ? (changeLikes(), animation()) : undefined}}
+                    onDoubleClick={() => {userLike === 'not' ? (changeLikes(), heartAnimation()) : undefined}}
                     className="post_img_size"
                     src={image}
                     data-test="post-image"
@@ -71,6 +70,7 @@ export default function Post(props) {
                         <ion-icon
                             onClick={() => {savePost === 'bookmark-outline' ? setSavePost('bookmark') : setSavePost('bookmark-outline')}}
                             name={savePost}
+                            id="hover"
                             data-test="save-post"
                         ></ion-icon>
                     </div>

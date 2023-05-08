@@ -21,23 +21,9 @@ body {
 .left_full {
   margin-left: 18px;
 }
-button {
-  cursor: pointer;
-}
-img {
-  cursor: pointer;
-}
-video {
-  cursor: pointer;
-}
 /*---------------tamanho dos icones e da logo--------------*/
 ion-icon {
   font-size: 26px;
-}
-ion-icon:hover {
-  cursor: pointer;
-  color: #139EF2;
-  transition-duration: 300ms;
 }
 .mini_heart:hover {
   color: red;
@@ -106,17 +92,6 @@ e as suas disposições são diferentes*/
   align-items: center;
 }
 /*---------------------------------------------------------*/
-.arrow {
-  color: #FFFFFF;
-  background-color: rgba(121, 121, 121, 0.175);
-  border-radius: 100%;
-  box-shadow: 1.5px 1px 1.5px 1px rgba(121, 121, 121, 0.175);
-  /*as duas alterações abaixo junto da div .storie_img_size
-  ter position:absolute fazem a seta ficar por cima dos stories
-  , e no canto direito */
-  position: absolute;
-  right: 0;  
-}
 .storie_size {
   height: 66px;
   border-radius: 100%; /*retirar a parte quadrada do circulo*/
@@ -163,6 +138,17 @@ e as suas disposições são diferentes*/
 }
 .stories_no_arrow {
   display: flex;
+}
+.stories ion-icon {
+  color: #FFFFFF;
+  background-color: rgba(121, 121, 121, 0.175);
+  border-radius: 100%;
+  box-shadow: 1.5px 1px 1.5px 1px rgba(121, 121, 121, 0.175);
+  /*as duas alterações abaixo junto da div .storie_img_size
+  ter position:absolute fazem a seta ficar por cima dos stories
+  , e no canto direito */
+  position: absolute;
+  right: 0;  
 }
 /*---------------------------------------------------------*/
 .posts_container {
@@ -260,6 +246,7 @@ e as suas disposições são diferentes*/
 }
 /*---------------*/
 .post_img_size {
+  cursor: pointer;
   width: 100%;
   /*a linha abaixo faz a imagem se tornar um quadrado
   (pode e vai alarga-la ou encurta-la)*/
@@ -318,10 +305,16 @@ e as suas disposições são diferentes*/
   color: black;
 }
 #red:hover {
+  cursor: pointer;
   color: black;
 }
 #black:hover {
+  cursor: pointer;
   color: red;
+}
+#hover:hover {
+  color: grey;
+  cursor: pointer;
 }
 /*---------------------------------------------------------*/
 #heartDiv {
@@ -340,8 +333,4 @@ e as suas disposições são diferentes*/
   position: absolute;
   color: white;
   transition-duration: 300ms;
-}
-#heart:hover {
-  color: white;
-  transition: none;
 }
