@@ -30,7 +30,7 @@ export const post_OBJ = [
         user: 'Jojofag Cult',
         image: './assets/jojo.jpg',
         user_comment: 'primeiro doguinho',
-        N_likes: 3,
+        N_likes: 0,
         comment_img: './assets/0_dog.webp',
         title: 'saudades bob esponja',
         N_comments: 5,
