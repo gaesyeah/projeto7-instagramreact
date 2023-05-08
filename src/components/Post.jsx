@@ -8,7 +8,9 @@ export default function Post(props) {
     let [likes, setLikes] = useState(N_likes);
     let [iconLikes, setIconLikes] = useState('heart-outline');
     let [styleLikes, setStyleLikes] = useState('black');
-    let [likeAnimation, setLikeAnimation] = useState('hide');
+
+    let [likeAnimation, setLikeAnimation] = useState('heart');
+    let [toggleHide, setToggleHide] = useState(false);
 
     function changeLikes() {
         if (userLike === 'not') {
@@ -27,9 +29,10 @@ export default function Post(props) {
     }
 
     function animation() {
-        setLikeAnimation('heart');
+        setToggleHide(true);
         setTimeout(() => setLikeAnimation('heartAnimation'), 0);
-        setTimeout(() => setLikeAnimation('hide'), 500);
+        setTimeout(() => setToggleHide(false), 500);
+        setTimeout(() => setLikeAnimation('heart'), 500);
     }
 
     return (
@@ -50,7 +53,7 @@ export default function Post(props) {
                     src={image}
                     data-test="post-image"
                 />
-                <ion-icon id={likeAnimation} name="heart"></ion-icon>
+                {toggleHide && <ion-icon id={likeAnimation} name="heart"></ion-icon>}
             </div>
             <div className="post_bottom_container">
                 <div className="post_bottom">

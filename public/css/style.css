@@ -341,9 +341,6 @@ e as suas disposições são diferentes*/
   color: white;
   transition-duration: 300ms;
 }
-#hide {
-  display: none;
-}
 #heart:hover {
   color: white;
   transition: none;
