@@ -25,9 +25,6 @@ body {
 ion-icon {
   font-size: 26px;
 }
-.mini_heart:hover {
-  color: red;
-}
 .img_size {
   margin-top: 6px;
   height: 100%; /*para se adaptar a div .top_bar_lateral*/
@@ -196,7 +193,6 @@ e as suas disposições são diferentes*/
 }
 .see_comments {
   color: #8E8E8E;
-  cursor: pointer;
 }
 .no_margin {
   margin-left: 0px;

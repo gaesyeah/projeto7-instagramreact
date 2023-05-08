@@ -162,11 +162,9 @@ column para me permitir centralizar o texto */
 }
 .text_ver {
   color: #262626;
-  cursor: pointer;
 }
 .text_seguir {
   color: #139EF2;
-  cursor: pointer;
 }
 /*----------------------------------------------------*/
 /*versão para desktop com tela um pouco menor*/
