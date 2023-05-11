@@ -47,7 +47,7 @@ export default function Post(props) {
             </div>
             <div id='heartDiv'>
                 <img
-                    onDoubleClick={() => {userLike === 'not' ? (changeLikes(), heartAnimation()) : undefined}}
+                    onDoubleClick={userLike === 'not' ? (()=> (changeLikes(), heartAnimation())) : undefined}
                     className="post_img_size"
                     src={image}
                     data-test="post-image"
@@ -68,7 +68,7 @@ export default function Post(props) {
                     </div>
                     <div className="post_top_down_right">
                         <ion-icon
-                            onClick={() => {savePost === 'bookmark-outline' ? setSavePost('bookmark') : setSavePost('bookmark-outline')}}
+                            onClick={savePost === 'bookmark-outline' ? () => setSavePost('bookmark') : () => setSavePost('bookmark-outline')}
                             name={savePost}
                             id="hover"
                             data-test="save-post"
